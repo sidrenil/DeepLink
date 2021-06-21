@@ -10,30 +10,47 @@
 
     <EditText
         android:id="@+id/editT"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="buraya yaz"
-        android:background="@color/purple_200"
-        android:textColorHint="#6A6262"
-        android:textSize="20sp"
+        android:layout_height="48dp"
+        android:paddingStart="12dp"
         android:layout_marginTop="250dp"
+        android:background="@drawable/edit_text_border"
+        android:hint="buraya yaz"
+        android:textColorHint="#6A6262"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/git_button"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="70dp"
         android:text="GİT"
+        android:background="@drawable/edit_text_border"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:backgroundTint="#F18B8B"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@+id/editT"
+        app:backgroundTint="@color/teal_200"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-       />
-
+        app:layout_constraintTop_toBottomOf="@+id/editT"
+        android:layout_marginTop="24dp"
+        tools:ignore="MissingConstraints" />
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,15 +5,26 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 
-class SecondActivity: AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
 
     private lateinit var webV: WebView
+    lateinit var banner1 : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.web_view)
+
+        MobileAds.initialize(this) {}
+
+        val banner1 : AdView = findViewById(R.id.banner1)
+        val adRequest = AdRequest.Builder().build()
+        banner1.loadAd(adRequest)
+
 
         val site = intent.getParcelableExtra<DataClass>("siteUrl")
 
